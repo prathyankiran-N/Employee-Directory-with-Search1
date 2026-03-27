@@ -17,7 +17,6 @@ const modal = document.getElementById("modal");
 const modalBody = document.getElementById("modalBody");
 const closeModal = document.querySelector(".close");
 
-// Populate filters dynamically
 function populateFilters() {
   const departments = [...new Set(employees.map(e => e.department))];
   const locations = [...new Set(employees.map(e => e.location))];
@@ -37,7 +36,8 @@ function populateFilters() {
   });
 }
 
-// Render employee cards
+
+
 function renderEmployees(list) {
   grid.innerHTML = "";
   list.forEach(emp => {
@@ -54,7 +54,6 @@ function renderEmployees(list) {
   });
 }
 
-// Search & filter logic
 function filterEmployees() {
   const query = searchInput.value.toLowerCase();
   const dept = departmentFilter.value;
